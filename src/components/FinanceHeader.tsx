@@ -21,7 +21,7 @@ export const FinanceHeader = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 pb-3">
             <Car className="h-8 w-8 text-qmf-purple" />
             <span className="text-xl font-bold text-qmf-purple">Quick Motor Finance</span>
           </div>

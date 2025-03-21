@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
@@ -26,7 +25,7 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <a href="/" className="flex items-center">
+          <a href="/" className="flex items-center pb-3">
             <span className="text-qmf-primary font-bold text-2xl">Quick</span>
             <span className="text-qmf-dark font-medium text-2xl">Motor</span>
             <span className="ml-1 text-qmf-primary font-bold text-2xl">Finance</span>
@@ -66,7 +65,6 @@ const Header = () => {
         </button>
       </div>
       
-      {/* Mobile menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-5 animate-fade-in z-50">
           <nav className="flex flex-col space-y-4">
