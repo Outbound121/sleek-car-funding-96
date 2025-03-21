@@ -77,7 +77,7 @@ const Index = () => {
         <section className="bg-white py-16">
           <div className="container mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              Vehicles Available for Finance
+              HOT deals on affordable cars
             </h2>
             <CarCarousel />
           </div>
