@@ -46,6 +46,18 @@ export const Footer = () => {
           </div>
         </div>
 
+        {/* Compliance Information */}
+        <div className="border-t border-gray-700 pt-8 mb-8">
+          <div className="text-xs text-gray-400 leading-relaxed">
+            <p className="mb-4">
+              <strong>FCA No. 660831</strong> Quick Motor Finance is a trading name of Whitehall Road Car Centre Limited who are registered in England and Wales under company number: 05437660. 263 Whitehall Road, Leeds, West Yorkshire, LS12 6ERL, UNITED KINGDOM Whitehall Road Car Centre Limited is authorised and regulated by the Financial Conduct Authority, under FCA number: 660831. We act as a credit broker not a lender.
+            </p>
+            <p>
+              We work with a number of carefully selected credit providers who may be able to offer you finance for your purchase. (Written Quotation available upon request). Whichever lender we introduce you to, we will typically receive commission from them (either a fixed fee or a fixed percentage of the amount you borrow). The lenders we work with could pay commission at different rates. All finance is subject to status and income. Terms and conditions apply. Applicants must be 18 years or over. We are only able to offer finance products from these providers. Whitehall Road Car Centre Limited are registered with the Information Commissioners Office under registration number: ZA055193.
+            </p>
+          </div>
+        </div>
+
         <div className="border-t border-gray-700 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
