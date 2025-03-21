@@ -54,12 +54,12 @@ const Index = () => {
 
       <main className="flex-1">
         {/* Finance Application Form Section - replaced with iframe container */}
-        <section className="container mx-auto py-12">
+        <section className="container mx-auto py-6">
           <div className="bg-white rounded-xl shadow-lg overflow-hidden p-8">
             <div id="iframe-container" className="w-full min-h-[600px]"></div>
             
             {/* Compliance Text */}
-            <div className="mt-8 text-sm text-gray-700 border-t pt-6">
+            <div className="mt-4 text-sm text-gray-700 border-t pt-4">
               <p className="font-semibold mb-2">Representative APR 12.6%. Rates may vary depending on individual circumstances. WE ARE A FINANCE BROKER, NOT A LENDER.</p>
               
               <p className="font-semibold mb-1">REPRESENTATIVE EXAMPLE:</p>
