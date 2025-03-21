@@ -16,6 +16,17 @@ export const FinanceHeader = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToForm = () => {
+    const formElement = document.getElementById('iframe-container');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth' });
+    }
+    // Close mobile menu if it's open
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <header className={`w-full ${isScrolled ? "bg-white shadow-md py-1" : "bg-transparent py-2"} transition-all duration-300 z-50`}>
       <div className="container mx-auto px-4">
@@ -40,7 +51,7 @@ export const FinanceHeader = () => {
               <Phone className="h-5 w-5 text-qmf-purple" />
               <span className="text-qmf-dark-gray font-medium">0800 123 4567</span>
             </div>
-            <Button variant="default" className="bg-qmf-purple hover:bg-qmf-purple/90">Apply Now</Button>
+            <Button variant="default" className="bg-qmf-purple hover:bg-qmf-purple/90" onClick={scrollToForm}>Apply Now</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -69,7 +80,7 @@ export const FinanceHeader = () => {
               <Phone className="h-5 w-5 text-qmf-purple" />
               <span className="text-qmf-dark-gray font-medium">0800 123 4567</span>
             </div>
-            <Button variant="default" className="bg-qmf-purple hover:bg-qmf-purple/90 w-full">Apply Now</Button>
+            <Button variant="default" className="bg-qmf-purple hover:bg-qmf-purple/90 w-full" onClick={scrollToForm}>Apply Now</Button>
           </nav>
         </div>
       )}
@@ -86,7 +97,7 @@ export const FinanceHeader = () => {
               Get approved in minutes, not days.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-qmf-yellow hover:bg-qmf-yellow/90 text-qmf-dark-gray font-semibold">
+              <Button size="lg" className="bg-qmf-yellow hover:bg-qmf-yellow/90 text-qmf-dark-gray font-semibold" onClick={scrollToForm}>
                 Apply Now <CreditCard className="ml-2 h-5 w-5" />
               </Button>
             </div>

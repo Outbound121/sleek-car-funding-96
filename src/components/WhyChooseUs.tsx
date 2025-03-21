@@ -25,6 +25,13 @@ export const WhyChooseUs = () => {
     }
   ];
 
+  const scrollToForm = () => {
+    const formElement = document.getElementById('iframe-container');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="container mx-auto">
       <div className="text-center mb-12">
@@ -58,7 +65,7 @@ export const WhyChooseUs = () => {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="px-6 py-3 bg-white text-qmf-purple font-semibold rounded-md hover:bg-gray-100 transition-colors">
+            <button className="px-6 py-3 bg-white text-qmf-purple font-semibold rounded-md hover:bg-gray-100 transition-colors" onClick={scrollToForm}>
               Apply Now
             </button>
             <button className="px-6 py-3 bg-transparent border border-white text-white font-semibold rounded-md hover:bg-white/10 transition-colors">
