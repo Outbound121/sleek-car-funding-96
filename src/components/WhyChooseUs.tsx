@@ -16,7 +16,7 @@ export const WhyChooseUs = () => {
     {
       icon: <ThumbsUp className="h-10 w-10 mb-4 text-qmf-purple" />,
       title: "No Obligation",
-      description: "Soft credit checks that won't impact your credit score, so you can explore your options with confidence."
+      description: "Initial soft credit checks that won't impact your credit score, so you can check eligibility with confidence."
     },
     {
       icon: <Award className="h-10 w-10 mb-4 text-qmf-purple" />,
