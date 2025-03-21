@@ -1,8 +1,7 @@
-
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChevronLeft, ChevronRight, Car, Fuel, Calendar, Info } from "lucide-react";
+import { ChevronLeft, ChevronRight, Car, Fuel, Calendar, CreditCard } from "lucide-react";
 
 // Sample car data
 const cars = [
@@ -155,7 +154,7 @@ export const CarCarousel = () => {
               </CardContent>
               <CardFooter>
                 <Button variant="outline" className="w-full">
-                  <Info className="mr-2 h-4 w-4" /> View Details
+                  <CreditCard className="mr-2 h-4 w-4" /> Apply for Finance
                 </Button>
               </CardFooter>
             </Card>
