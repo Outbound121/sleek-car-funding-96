@@ -182,7 +182,7 @@ export const CarCarousel = () => {
         <ChevronRight className="h-6 w-6" />
       </Button>
 
-      <div className="text-center mt-12">
+      <div className="text-center mt-12 pb-8">
         <Button 
           className="bg-qmf-purple hover:bg-qmf-purple/90"
           onClick={scrollToForm}
