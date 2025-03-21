@@ -3,6 +3,15 @@ import { useState, useEffect } from "react";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
+// Color palette for the avatar circles
+const colors = [
+  "bg-[#9b87f5]",
+  "bg-[#7E69AB]", 
+  "bg-[#0EA5E9]",
+  "bg-[#F97316]",
+  "bg-[#D946EF]",
+];
+
 const reviews = [
   {
     id: 1,
@@ -10,7 +19,6 @@ const reviews = [
     review: "Outstanding service from start to finish, didnt think I had a cat in hells chance of getting finance but these guys got me sorted in no time",
     rating: 5,
     date: "15 March 2023",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
     id: 2,
@@ -18,7 +26,6 @@ const reviews = [
     review: "Many thanks for sorting out my car finance and the same day drive away was perfect!",
     rating: 5,
     date: "2 February 2023",
-    image: "https://randomuser.me/api/portraits/women/28.jpg",
   },
   {
     id: 3,
@@ -26,7 +33,6 @@ const reviews = [
     review: "Hi Matt, Well what can I say?.......I TOTALLY LOVE MY CAR!!!!!!, Thank you so much!!, Leanne",
     rating: 5,
     date: "27 April 2023",
-    image: "https://randomuser.me/api/portraits/women/45.jpg",
   },
   {
     id: 4,
@@ -34,7 +40,6 @@ const reviews = [
     review: "Just got my first car from The Car Finance Hub, sorted me out with a cracking deal thank you for the smooth journey",
     rating: 5,
     date: "10 May 2023",
-    image: "https://randomuser.me/api/portraits/women/12.jpg",
   },
   {
     id: 5,
@@ -42,9 +47,17 @@ const reviews = [
     review: "Despite been on benefits the car finance hub was able to secure funding for me to purchase a 2014 plate vauxhall cross enabling me get to my 2 boys to school on time",
     rating: 5,
     date: "3 June 2023",
-    image: "https://randomuser.me/api/portraits/women/63.jpg",
   },
 ];
+
+// Helper function to get initials from name
+const getInitials = (name: string) => {
+  return name
+    .split(' ')
+    .map(part => part[0])
+    .join('')
+    .toUpperCase();
+};
 
 export const CustomerReviews = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -111,7 +124,7 @@ export const CustomerReviews = () => {
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentSlide * (100 / visibleReviews)}%)` }}
           >
-            {reviews.map((review) => (
+            {reviews.map((review, index) => (
               <div 
                 key={review.id} 
                 className={`w-full px-3 md:px-4`}
@@ -120,14 +133,10 @@ export const CustomerReviews = () => {
                 <Card className="h-full">
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                        <img 
-                          src={review.image} 
-                          alt={review.name} 
-                          className="w-full h-full object-cover"
-                        />
+                      <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-semibold ${colors[index % colors.length]}`}>
+                        {getInitials(review.name)}
                       </div>
-                      <div>
+                      <div className="ml-4">
                         <h4 className="font-semibold">{review.name}</h4>
                         <div className="flex mt-1">
                           {renderStars(review.rating)}
