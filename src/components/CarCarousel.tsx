@@ -7,13 +7,13 @@ import { ChevronLeft, ChevronRight, Car, Fuel, Calendar, CreditCard } from "luci
 const cars = [
   {
     id: 1,
-    title: "2020 BMW 3 Series",
-    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=800&auto=format&fit=crop&h=400",
-    price: 22995,
-    mileage: 25000,
+    title: "2020 Vauxhall Astra",
+    image: "/lovable-uploads/367a6ea2-2e32-4309-8cde-03380e76e1ad.png",
+    price: 10690,
+    mileage: 72365,
     fuelType: "Diesel",
     year: 2020,
-    monthlyPayment: 349,
+    monthlyPayment: 238,
   },
   {
     id: 2,
