@@ -58,8 +58,8 @@ const Index = () => {
           <div className="bg-white rounded-xl shadow-lg overflow-hidden p-8">
             <div id="iframe-container" className="w-full min-h-[600px]"></div>
             
-            {/* Compliance Text */}
-            <div className="mt-4 text-sm text-gray-700 border-t pt-4 pb-4">
+            {/* Compliance Text - reduced spacing above this section */}
+            <div className="mt-2 text-sm text-gray-700 border-t pt-4 pb-4">
               <p className="font-semibold mb-2">Representative APR 12.6%. Rates may vary depending on individual circumstances. WE ARE A FINANCE BROKER, NOT A LENDER.</p>
               
               <p className="font-semibold mb-1">REPRESENTATIVE EXAMPLE:</p>
