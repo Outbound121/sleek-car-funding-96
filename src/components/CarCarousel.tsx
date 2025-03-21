@@ -17,13 +17,13 @@ const cars = [
   },
   {
     id: 2,
-    title: "2021 Audi A4",
-    image: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?q=80&w=800&auto=format&fit=crop&h=400",
-    price: 25495,
-    mileage: 20000,
+    title: "2016 Audi A4",
+    image: "/lovable-uploads/a6853f66-d587-41d3-82f7-27d770611ee4.png",
+    price: 10980,
+    mileage: 68303,
     fuelType: "Petrol",
-    year: 2021,
-    monthlyPayment: 389,
+    year: 2016,
+    monthlyPayment: 245,
   },
   {
     id: 3,
@@ -63,7 +63,6 @@ export const CarCarousel = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [autoplayEnabled, setAutoplayEnabled] = useState(true);
   
-  // Determine visible items based on screen width
   useEffect(() => {
     const updateVisibleItems = () => {
       if (window.innerWidth < 640) {
@@ -80,7 +79,6 @@ export const CarCarousel = () => {
     return () => window.removeEventListener("resize", updateVisibleItems);
   }, []);
 
-  // Auto-scroll functionality
   useEffect(() => {
     if (!autoplayEnabled) return;
     
@@ -99,7 +97,6 @@ export const CarCarousel = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + cars.length) % cars.length);
   };
 
-  // Create a circular array for infinite scrolling
   const getVisibleCars = () => {
     const result = [];
     for (let i = 0; i < visibleItems; i++) {
@@ -162,7 +159,6 @@ export const CarCarousel = () => {
         </div>
       </div>
 
-      {/* Navigation buttons */}
       <Button 
         variant="outline" 
         className="absolute top-1/2 -left-4 transform -translate-y-1/2 rounded-full w-10 h-10 p-0 bg-white shadow-md hover:bg-gray-100"
@@ -178,7 +174,6 @@ export const CarCarousel = () => {
         <ChevronRight className="h-6 w-6" />
       </Button>
 
-      {/* View All Cars Button */}
       <div className="text-center mt-12">
         <Button className="bg-qmf-purple hover:bg-qmf-purple/90">
           View All Vehicles
