@@ -57,6 +57,19 @@ const Index = () => {
         <section className="container mx-auto py-12">
           <div className="bg-white rounded-xl shadow-lg overflow-hidden p-8">
             <div id="iframe-container" className="w-full min-h-[600px]"></div>
+            
+            {/* Compliance Text */}
+            <div className="mt-8 text-sm text-gray-700 border-t pt-6">
+              <p className="font-semibold mb-2">Representative APR 12.6%. Rates may vary depending on individual circumstances. WE ARE A FINANCE BROKER, NOT A LENDER.</p>
+              
+              <p className="font-semibold mb-1">REPRESENTATIVE EXAMPLE:</p>
+              
+              <p>
+                Borrowing £5,495.00 over 60 months with a representative APR of 12.6%, an annual interest rate of 5.75% (Fixed) 
+                and a deposit of £0.00, with the initial payment of £268.06 and final payment of £268.06, and £119.06 per month 
+                over 58 months, with a total cost of credit of £1946.00, and a total amount payable of £7,441.50
+              </p>
+            </div>
           </div>
         </section>
 
