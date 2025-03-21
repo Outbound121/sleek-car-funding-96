@@ -1,10 +1,9 @@
 
-import { Calendar, Car, CreditCard, Menu, Phone, X } from "lucide-react";
+import { Calendar, Car, CreditCard, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 export const FinanceHeader = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -20,10 +19,6 @@ export const FinanceHeader = () => {
     const formElement = document.getElementById('iframe-container');
     if (formElement) {
       formElement.scrollIntoView({ behavior: 'smooth' });
-    }
-    // Close mobile menu if it's open
-    if (isMenuOpen) {
-      setIsMenuOpen(false);
     }
   };
 
@@ -50,45 +45,16 @@ export const FinanceHeader = () => {
             <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Contact</a>
           </nav>
 
-          {/* Contact Info */}
-          <div className="hidden md:flex items-center space-x-6">
-            <div className="flex items-center space-x-2">
+          {/* Contact Info - Visible on all screen sizes */}
+          <div className="flex items-center space-x-6">
+            <div className="hidden md:flex items-center space-x-2">
               <Phone className="h-5 w-5 text-qmf-purple" />
               <span className="text-qmf-dark-gray font-medium">0800 123 4567</span>
             </div>
             <Button variant="default" className="bg-qmf-purple hover:bg-qmf-purple/90" onClick={scrollToForm}>Apply Now</Button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-qmf-dark-gray"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg absolute top-full left-0 right-0 p-4 border-t border-gray-100 z-50">
-          <nav className="flex flex-col space-y-4">
-            <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors py-2">Home</a>
-            <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors py-2">About Us</a>
-            <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors py-2">Vehicles</a>
-            <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors py-2">Contact</a>
-            <div className="flex items-center space-x-2 py-2">
-              <Phone className="h-5 w-5 text-qmf-purple" />
-              <span className="text-qmf-dark-gray font-medium">0800 123 4567</span>
-            </div>
-            <Button variant="default" className="bg-qmf-purple hover:bg-qmf-purple/90 w-full" onClick={scrollToForm}>Apply Now</Button>
-          </nav>
-        </div>
-      )}
 
       {/* Hero Banner */}
       <div className="pt-10 pb-20 bg-gradient-to-r from-qmf-purple to-purple-800 text-white">
