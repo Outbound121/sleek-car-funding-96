@@ -58,8 +58,8 @@ const Features = () => {
   const features = [
     {
       icon: Clock,
-      title: "Quick Approval",
-      description: "Get pre-approved in minutes with our streamlined application process. No long waits or excessive paperwork.",
+      title: "Quick Decision",
+      description: "Apply now and get a decision in minutes! You could be approved today!",
       delay: 100
     },
     {
