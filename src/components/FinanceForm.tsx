@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, ChevronRight, Car, DollarSign, User, FileText } from 'lucide-react';
@@ -9,9 +8,6 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Slider } from "@/components/ui/slider";
 import { toast } from "@/components/ui/use-toast";
-
-// We'll import framer-motion for smooth animations
-import { lov-add-dependency } from 'framer-motion@10.16.4';
 
 const steps = [
   { id: 1, name: 'Vehicle', icon: Car },
@@ -95,7 +91,6 @@ const FinanceForm = () => {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          {/* Step indicators */}
           <div className="flex justify-between mb-12 relative">
             <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-qmf-secondary -translate-y-1/2"></div>
             
@@ -131,11 +126,9 @@ const FinanceForm = () => {
             ))}
           </div>
           
-          {/* Form content */}
           <div className="bg-white rounded-xl shadow-lg border border-qmf-secondary/50 overflow-hidden">
             <form onSubmit={handleSubmit}>
               <AnimatePresence mode="wait">
-                {/* Step 1: Vehicle Details */}
                 {currentStep === 1 && (
                   <motion.div
                     key="step1"
@@ -200,7 +193,6 @@ const FinanceForm = () => {
                   </motion.div>
                 )}
                 
-                {/* Step 2: Finance Details */}
                 {currentStep === 2 && (
                   <motion.div
                     key="step2"
@@ -311,7 +303,6 @@ const FinanceForm = () => {
                   </motion.div>
                 )}
                 
-                {/* Step 3: Personal Information */}
                 {currentStep === 3 && (
                   <motion.div
                     key="step3"
@@ -380,7 +371,6 @@ const FinanceForm = () => {
                   </motion.div>
                 )}
                 
-                {/* Step 4: Confirmation */}
                 {currentStep === 4 && (
                   <motion.div
                     key="step4"
@@ -452,7 +442,6 @@ const FinanceForm = () => {
                   </motion.div>
                 )}
                 
-                {/* Navigation Buttons */}
                 <div className="px-8 py-6 bg-qmf-secondary/20 border-t border-qmf-secondary/50 flex justify-between">
                   {currentStep > 1 && (
                     <Button
