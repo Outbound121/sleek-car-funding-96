@@ -75,7 +75,7 @@ export const FinanceHeader = () => {
       )}
 
       {/* Hero Banner */}
-      <div className="pt-16 pb-20 bg-gradient-to-r from-qmf-purple to-purple-800 text-white">
+      <div className="pt-10 pb-20 bg-gradient-to-r from-qmf-purple to-purple-800 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
