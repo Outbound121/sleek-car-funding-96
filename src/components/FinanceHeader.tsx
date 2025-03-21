@@ -89,9 +89,6 @@ export const FinanceHeader = () => {
               <Button size="lg" className="bg-qmf-yellow hover:bg-qmf-yellow/90 text-qmf-dark-gray font-semibold">
                 Apply Now <CreditCard className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 border-white hover:bg-white/20">
-                Check Eligibility <Calendar className="ml-2 h-5 w-5" />
-              </Button>
             </div>
           </div>
         </div>
