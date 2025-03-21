@@ -21,7 +21,7 @@ export const WhyChooseUs = () => {
     {
       icon: <Award className="h-10 w-10 mb-4 text-qmf-purple" />,
       title: "Expert Support",
-      description: "Our knowledgeable team provides personalized guidance throughout your car finance journey."
+      description: "Our team are car shopping experts and we've helped 1000s of people drive their next car."
     }
   ];
 
