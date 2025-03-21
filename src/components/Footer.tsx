@@ -1,5 +1,5 @@
 
-import { Car, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Car, Mail, Phone, MapPin } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -16,20 +16,6 @@ export const Footer = () => {
               Providing affordable car finance solutions tailored to your needs. 
               We're here to help you drive away in your dream car.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-qmf-yellow transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-qmf-yellow transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-qmf-yellow transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-qmf-yellow transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
