@@ -25,9 +25,9 @@ export const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-qmf-yellow mr-3 mt-0.5" />
                 <span className="text-gray-400">
-                  123 Finance Street<br />
-                  Birmingham, B1 2CD<br />
-                  United Kingdom
+                  263 Whitehall Road Lower Wortley<br />
+                  Leeds West Yorkshire<br />
+                  LS12 6ER
                 </span>
               </li>
               <li className="flex items-center">
@@ -69,9 +69,6 @@ export const Footer = () => {
               <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
             </div>
           </div>
-          <p className="text-gray-500 text-xs mt-6 text-center">
-            Quick Motor Finance is authorised and regulated by the Financial Conduct Authority. Registered in England and Wales (Company No. 12345678).
-          </p>
         </div>
       </div>
     </footer>
