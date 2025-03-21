@@ -17,7 +17,7 @@ export const FinanceHeader = () => {
   }, []);
 
   return (
-    <header className={`w-full ${isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"} transition-all duration-300 fixed top-0 left-0 right-0 z-50`}>
+    <header className={`w-full ${isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"} transition-all duration-300 z-50`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -59,7 +59,7 @@ export const FinanceHeader = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg absolute top-full left-0 right-0 p-4 border-t border-gray-100">
+        <div className="md:hidden bg-white shadow-lg absolute top-full left-0 right-0 p-4 border-t border-gray-100 z-50">
           <nav className="flex flex-col space-y-4">
             <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors py-2">Home</a>
             <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors py-2">About Us</a>
@@ -75,7 +75,7 @@ export const FinanceHeader = () => {
       )}
 
       {/* Hero Banner */}
-      <div className="pt-32 pb-20 bg-gradient-to-r from-qmf-purple to-purple-800 text-white">
+      <div className="pt-16 pb-20 bg-gradient-to-r from-qmf-purple to-purple-800 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">

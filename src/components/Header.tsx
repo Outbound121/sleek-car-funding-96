@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-10 ${
+      className={`w-full z-50 transition-all duration-300 px-6 md:px-10 ${
         isScrolled 
           ? 'py-3 bg-white shadow-md' 
           : 'py-5 bg-transparent'
@@ -68,7 +68,7 @@ const Header = () => {
       
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-5 animate-fade-in">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-5 animate-fade-in z-50">
           <nav className="flex flex-col space-y-4">
             {['Home', 'About Us', 'Vehicles', 'Finance Options', 'Contact'].map((item) => (
               <a 
