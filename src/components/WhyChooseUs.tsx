@@ -11,7 +11,7 @@ export const WhyChooseUs = () => {
     {
       icon: <Shield className="h-10 w-10 mb-4 text-qmf-purple" />,
       title: "Flexible Options",
-      description: "We offer tailored finance solutions regardless of your credit history."
+      description: "Good or bad credit - we could help!"
     },
     {
       icon: <ThumbsUp className="h-10 w-10 mb-4 text-qmf-purple" />,
