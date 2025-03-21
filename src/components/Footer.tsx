@@ -64,8 +64,8 @@ export const Footer = () => {
               &copy; 2025 Quick Motor Finance. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+              <a href="https://www.thecarfinancehub.co.uk/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="https://67cdn.co.uk/381/6/17199135286683cc3900664_bcf-idd.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Initial Disclosure Agreement</a>
               <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
             </div>
           </div>
