@@ -17,7 +17,7 @@ export const FinanceHeader = () => {
   }, []);
 
   return (
-    <header className={`w-full ${isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"} transition-all duration-300 z-50`}>
+    <header className={`w-full ${isScrolled ? "bg-white shadow-md py-1" : "bg-transparent py-2"} transition-all duration-300 z-50`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
