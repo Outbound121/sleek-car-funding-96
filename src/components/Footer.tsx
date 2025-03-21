@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer className="bg-qmf-dark-gray text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-6">
@@ -43,30 +43,6 @@ export const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
-
-          {/* Opening Hours */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Opening Hours</h3>
-            <ul className="space-y-2">
-              <li className="flex justify-between">
-                <span className="text-gray-400">Monday - Friday:</span>
-                <span className="text-white">9:00 AM - 6:00 PM</span>
-              </li>
-              <li className="flex justify-between">
-                <span className="text-gray-400">Saturday:</span>
-                <span className="text-white">10:00 AM - 4:00 PM</span>
-              </li>
-              <li className="flex justify-between">
-                <span className="text-gray-400">Sunday:</span>
-                <span className="text-white">Closed</span>
-              </li>
-            </ul>
-            <div className="mt-6 p-4 bg-qmf-purple/20 rounded">
-              <p className="text-white text-sm">
-                Need help outside business hours? Send us a message and we'll get back to you as soon as possible.
-              </p>
-            </div>
           </div>
         </div>
 
