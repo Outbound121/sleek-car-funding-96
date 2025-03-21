@@ -37,7 +37,7 @@ export const FinanceHeader = () => {
               <img 
                 src="/lovable-uploads/fe31f1c8-6180-4be4-9dc5-1fac869f15ec.png" 
                 alt="Quick Motor Finance" 
-                className="h-16 md:h-20" 
+                className="h-20 md:h-24" 
               />
             </a>
           </div>
