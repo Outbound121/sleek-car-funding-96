@@ -32,9 +32,14 @@ export const FinanceHeader = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center space-x-2 pb-3">
-            <Car className="h-8 w-8 text-qmf-purple" />
-            <span className="text-xl font-bold text-qmf-purple">Quick Motor Finance</span>
+          <div className="flex items-center">
+            <a href="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/fe31f1c8-6180-4be4-9dc5-1fac869f15ec.png" 
+                alt="Quick Motor Finance" 
+                className="h-12" 
+              />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
