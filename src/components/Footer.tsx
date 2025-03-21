@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer className="bg-qmf-dark-gray text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-6">
@@ -16,31 +16,6 @@ export const Footer = () => {
               Providing affordable car finance solutions tailored to your needs. 
               We're here to help you drive away in your dream car.
             </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Home</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">About Us</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Apply For Finance</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Available Vehicles</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Finance Calculator</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Contact Us</a>
-              </li>
-            </ul>
           </div>
 
           {/* Contact Information */}
