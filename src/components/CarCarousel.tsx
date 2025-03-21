@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -106,6 +107,13 @@ export const CarCarousel = () => {
     return result;
   };
 
+  const scrollToForm = () => {
+    const iframeContainer = document.getElementById('iframe-container');
+    if (iframeContainer) {
+      iframeContainer.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="relative">
       <div 
@@ -175,8 +183,11 @@ export const CarCarousel = () => {
       </Button>
 
       <div className="text-center mt-12">
-        <Button className="bg-qmf-purple hover:bg-qmf-purple/90">
-          View All Vehicles
+        <Button 
+          className="bg-qmf-purple hover:bg-qmf-purple/90"
+          onClick={scrollToForm}
+        >
+          <CreditCard className="mr-2 h-4 w-4" /> Apply for Finance
         </Button>
       </div>
     </div>
