@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -194,7 +193,7 @@ export const CustomerReviews = () => {
             <div className="flex">
               {renderStars(5)}
             </div>
-            <span className="ml-2 font-semibold">4.8/5</span>
+            <span className="ml-2 font-semibold">4.7/5</span>
           </div>
           <div className="text-qmf-medium-gray">Over 2,000+ happy customers</div>
           <div className="text-qmf-medium-gray">FCA Regulated</div>
