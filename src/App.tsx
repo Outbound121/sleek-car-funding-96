@@ -17,9 +17,9 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<Navigate to="/finance" replace />} />
           <Route path="/finance" element={<Finance />} />
-          <Route path="/index" element={<Index />} />
+          <Route path="/index" element={<Navigate to="/finance" replace />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
