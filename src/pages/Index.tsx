@@ -3,6 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import VehicleShowcase from "@/components/VehicleShowcase";
+import Testimonials from "@/components/Testimonials";
+import Features from "@/components/Features";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
 
 const Index = () => {
   return (
@@ -74,6 +78,20 @@ const Index = () => {
               </Button>
             </div>
           </div>
+        </section>
+        
+        {/* Vehicle Showcase Section */}
+        <VehicleShowcase />
+        
+        {/* Why Choose Us Section with more details */}
+        <Features />
+        
+        {/* Testimonials Section */}
+        <Testimonials />
+        
+        {/* CTA Section */}
+        <section className="py-16 bg-white">
+          <WhyChooseUs />
         </section>
       </main>
       
