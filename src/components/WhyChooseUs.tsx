@@ -4,20 +4,20 @@ import { Shield, Clock, ThumbsUp, Award } from "lucide-react";
 export const WhyChooseUs = () => {
   const features = [{
     icon: <Clock className="h-10 w-10 mb-4 text-qmf-purple" />,
-    title: "Quick Approval",
-    description: "Get pre-approved in as little as 15 minutes with our streamlined application process."
+    title: "Quick Decision",
+    description: "Apply now and get a decision in minutes! You could be approved today!"
   }, {
     icon: <Shield className="h-10 w-10 mb-4 text-qmf-purple" />,
     title: "Flexible Options",
-    description: "We offer tailored finance solutions regardless of your credit history."
+    description: "Good or bad credit - we could help!"
   }, {
     icon: <ThumbsUp className="h-10 w-10 mb-4 text-qmf-purple" />,
     title: "No Obligation",
-    description: "Soft credit checks that won't impact your credit score, so you can explore your options with confidence."
+    description: "Initial soft credit checks that won't impact your credit score, so you can check eligibility with confidence."
   }, {
     icon: <Award className="h-10 w-10 mb-4 text-qmf-purple" />,
     title: "Expert Support",
-    description: "Our knowledgeable team provides personalized guidance throughout your car finance journey."
+    description: "Our team are car shopping experts and we've helped 1000s of people drive their next car."
   }];
   
   const scrollToForm = () => {
