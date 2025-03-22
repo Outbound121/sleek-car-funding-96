@@ -2,9 +2,11 @@
 import { useEffect } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { FinanceHeader } from "@/components/FinanceHeader";
-import { Footer } from "@/components/Footer";
 import { CarCarousel } from "@/components/CarCarousel";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
+import { CustomerReviews } from "@/components/CustomerReviews";
+import { Footer } from "@/components/Footer";
+import { AutoConvertCalculator } from "@/components/AutoConvertCalculator";
 
 const Finance = () => {
   const { toast } = useToast();
@@ -52,35 +54,30 @@ const Finance = () => {
       <FinanceHeader />
 
       <main className="flex-1">
-        {/* Finance Application Form Section - with iframe container */}
-        <section className="container mx-auto py-6">
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden p-8">
-            <div id="iframe-container" className="w-full min-h-[600px]"></div>
-            
-            {/* Compliance Text - reduced spacing above this section */}
-            <div className="mt-2 text-sm text-gray-700 border-t pt-4 pb-4">
-              <p className="font-semibold mb-2">Representative APR 12.6%. Rates may vary depending on individual circumstances. WE ARE A FINANCE BROKER, NOT A LENDER.</p>
-              
-              <p className="font-semibold mb-1">REPRESENTATIVE EXAMPLE:</p>
-              
-              <p>
-                Borrowing £5,495.00 over 60 months with a representative APR of 12.6%, an annual interest rate of 5.75% (Fixed) 
-                and a deposit of £0.00, with the initial payment of £268.06 and final payment of £268.06, and £119.06 per month 
-                over 58 months, with a total cost of credit of £1946.00, and a total amount payable of £7,441.50
-              </p>
-            </div>
-            
-            {/* Car Data Section */}
-            <div className="mt-8 border-t pt-8">
-              <h3 className="text-lg font-bold mb-4">Available Vehicles</h3>
-              <CarCarousel />
-            </div>
+        <div className="bg-white">
+          <div id="iframe-container" className="w-full min-h-[600px]"></div>
+          <div className="container mx-auto px-4 py-4 text-xs text-qmf-medium-gray -mt-1">
+            <p className="mb-1">Representative APR 12.6%. Rates may vary depending on individual circumstances. WE ARE A FINANCE BROKER, NOT A LENDER.</p>
+            <p className="font-semibold mb-1">REPRESENTATIVE EXAMPLE:</p>
+            <p className="mb-8">Borrowing £5,495.00 over 60 months with a representative APR of 12.6%, an annual interest rate of 5.75% (Fixed) and a deposit of £0.00, with the initial payment of £268.06 and final payment of £268.06, and £119.06 per month over 58 months, with a total cost of credit of £1946.00, and a total amount payable of £7,441.50</p>
+          </div>
+        </div>
+
+        <section className="bg-white">
+          <div className="container mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 pt-4">
+              HOT deals on affordable cars
+            </h2>
+            <CarCarousel />
           </div>
         </section>
-        
-        {/* Why Choose Us Section */}
-        <section className="py-16">
+
+        <section className="py-16 bg-qmf-light-gray">
           <WhyChooseUs />
+        </section>
+
+        <section className="py-16 bg-white">
+          <CustomerReviews />
         </section>
       </main>
 
