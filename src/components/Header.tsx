@@ -40,30 +40,42 @@ const Header = () => {
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
-          {[
-            { name: 'Home', path: '/finance' },
-            { name: 'About Us', path: '/about-us' },
-            { name: 'Vehicles', path: '#' },
-            { name: 'Finance Options', path: '/finance' },
-            { name: 'Contact', path: '#' }
-          ].map((item) => (
-            <Link 
-              key={item.name} 
-              to={item.path}
-              className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium"
-            >
-              {item.name}
-            </Link>
-          ))}
+          <Link 
+            to="/finance"
+            className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium"
+          >
+            Home
+          </Link>
+          <span className="text-qmf-dark font-medium cursor-default">
+            About Us
+          </span>
+          <a 
+            href="#" 
+            className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium"
+          >
+            Vehicles
+          </a>
+          <Link 
+            to="/finance"
+            className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium"
+          >
+            Finance Options
+          </Link>
+          <a 
+            href="#" 
+            className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium"
+          >
+            Contact
+          </a>
         </nav>
         
         <div className="hidden md:flex items-center">
           <a 
-            href="tel:0800123456" 
+            href="tel:01132631214" 
             className="mr-6 flex items-center text-qmf-primary font-medium hover:text-qmf-dark transition-colors duration-200"
           >
             <Phone className="w-4 h-4 mr-2" />
-            0800 123 456
+            0113 2631214
           </a>
           <Button className="bg-qmf-primary hover:bg-qmf-primary/90 text-white" onClick={navigateToFinance}>
             Apply Now
@@ -81,30 +93,47 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-5 animate-fade-in z-50">
           <nav className="flex flex-col space-y-4">
-            {[
-              { name: 'Home', path: '/finance' },
-              { name: 'About Us', path: '/about-us' },
-              { name: 'Vehicles', path: '#' },
-              { name: 'Finance Options', path: '/finance' },
-              { name: 'Contact', path: '#' }
-            ].map((item) => (
-              <Link 
-                key={item.name} 
-                to={item.path}
-                className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
+            <Link 
+              to="/finance"
+              className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <span 
+              className="text-qmf-dark font-medium py-2 cursor-default"
+            >
+              About Us
+            </span>
+            <a 
+              href="#"
+              className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Vehicles
+            </a>
+            <Link 
+              to="/finance"
+              className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Finance Options
+            </Link>
+            <a 
+              href="#"
+              className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Contact
+            </a>
           </nav>
           <div className="mt-6 flex flex-col space-y-4">
             <a 
-              href="tel:0800123456" 
+              href="tel:01132631214" 
               className="flex items-center text-qmf-primary font-medium"
             >
               <Phone className="w-4 h-4 mr-2" />
-              0800 123 456
+              0113 2631214
             </a>
             <Button className="w-full bg-qmf-primary hover:bg-qmf-primary/90 text-white" onClick={navigateToFinance}>
               Apply Now

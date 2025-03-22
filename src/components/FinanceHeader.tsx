@@ -41,7 +41,7 @@ export const FinanceHeader = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/finance" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Home</Link>
-            <Link to="/about-us" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">About Us</Link>
+            <span className="text-qmf-dark-gray cursor-default">About Us</span>
             <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Vehicles</a>
             <Link to="/finance" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Finance</Link>
             <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Contact</a>
@@ -51,7 +51,7 @@ export const FinanceHeader = () => {
           <div className="flex items-center space-x-6">
             <div className="hidden md:flex items-center space-x-2">
               <Phone className="h-5 w-5 text-qmf-purple" />
-              <span className="text-qmf-dark-gray font-medium">0800 123 4567</span>
+              <span className="text-qmf-dark-gray font-medium">0113 2631214</span>
             </div>
             <Button variant="default" className="bg-qmf-purple hover:bg-qmf-purple/90" onClick={scrollToForm}>Apply Now</Button>
           </div>
