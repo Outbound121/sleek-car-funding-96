@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -28,13 +27,13 @@ const cars = [
   },
   {
     id: 3,
-    title: "2022 Mercedes C-Class",
-    image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800&auto=format&fit=crop&h=400",
-    price: 28995,
-    mileage: 15000,
-    fuelType: "Hybrid",
-    year: 2022,
-    monthlyPayment: 429,
+    title: "2021 Seat Mii",
+    image: "/lovable-uploads/f7505986-9bba-4797-9918-d5fa358df5d5.png",
+    price: 11130,
+    mileage: 31340,
+    fuelType: "Electric",
+    year: 2021,
+    monthlyPayment: 248,
   },
   {
     id: 4,
@@ -64,7 +63,6 @@ export const CarCarousel = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [autoplayEnabled, setAutoplayEnabled] = useState(true);
   
-  // Determine visible items based on screen width
   useEffect(() => {
     const updateVisibleItems = () => {
       if (window.innerWidth < 640) {
@@ -81,7 +79,6 @@ export const CarCarousel = () => {
     return () => window.removeEventListener("resize", updateVisibleItems);
   }, []);
 
-  // Auto-scroll functionality
   useEffect(() => {
     if (!autoplayEnabled) return;
     
@@ -100,7 +97,6 @@ export const CarCarousel = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + cars.length) % cars.length);
   };
 
-  // Create a circular array for infinite scrolling
   const getVisibleCars = () => {
     const result = [];
     for (let i = 0; i < visibleItems; i++) {
@@ -174,7 +170,6 @@ export const CarCarousel = () => {
         </div>
       </div>
 
-      {/* Navigation buttons */}
       <Button 
         variant="outline" 
         className="absolute top-1/2 -left-4 transform -translate-y-1/2 rounded-full w-10 h-10 p-0 bg-white shadow-md hover:bg-gray-100"
@@ -190,7 +185,6 @@ export const CarCarousel = () => {
         <ChevronRight className="h-6 w-6" />
       </Button>
 
-      {/* View All Cars Button */}
       <div className="text-center mt-12">
         <Button className="bg-qmf-purple hover:bg-qmf-purple/90">
           View All Vehicles
