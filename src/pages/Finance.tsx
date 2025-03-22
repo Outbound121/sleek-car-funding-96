@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { FinanceHeader } from "@/components/FinanceHeader";
 import { Footer } from "@/components/Footer";
+import { CarCarousel } from "@/components/CarCarousel";
 
 const Finance = () => {
   const { toast } = useToast();
@@ -66,6 +67,12 @@ const Finance = () => {
                 and a deposit of £0.00, with the initial payment of £268.06 and final payment of £268.06, and £119.06 per month 
                 over 58 months, with a total cost of credit of £1946.00, and a total amount payable of £7,441.50
               </p>
+            </div>
+            
+            {/* Car Data Section */}
+            <div className="mt-8 border-t pt-8">
+              <h3 className="text-lg font-bold mb-4">Available Vehicles</h3>
+              <CarCarousel />
             </div>
           </div>
         </section>

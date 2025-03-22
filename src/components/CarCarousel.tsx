@@ -1,45 +1,40 @@
-
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, Car, Fuel, Calendar, CreditCard } from "lucide-react";
 
-// Sample car data
+// Car data
 const cars = [
   {
     id: 1,
-    title: "2020 Vauxhall Astra",
-    image: "/lovable-uploads/367a6ea2-2e32-4309-8cde-03380e76e1ad.png",
-    price: 10690,
-    mileage: 72365,
+    title: "2020 BMW 3 Series",
+    price: 22995,
+    mileage: 25000,
     fuelType: "Diesel",
     year: 2020,
-    monthlyPayment: 238,
+    monthlyPayment: 349,
   },
   {
     id: 2,
-    title: "2016 Audi A4",
-    image: "/lovable-uploads/a6853f66-d587-41d3-82f7-27d770611ee4.png",
-    price: 10980,
-    mileage: 68303,
+    title: "2021 Audi A4",
+    price: 25495,
+    mileage: 20000,
     fuelType: "Petrol",
-    year: 2016,
-    monthlyPayment: 245,
+    year: 2021,
+    monthlyPayment: 389,
   },
   {
     id: 3,
-    title: "2021 Seat Mii",
-    image: "/lovable-uploads/14f0c5d9-423f-4011-b79c-32f7753e7ffd.png",
-    price: 11130,
-    mileage: 31340,
-    fuelType: "Electric",
-    year: 2021,
-    monthlyPayment: 248,
+    title: "2022 Mercedes C-Class",
+    price: 28995,
+    mileage: 15000,
+    fuelType: "Hybrid",
+    year: 2022,
+    monthlyPayment: 429,
   },
   {
     id: 4,
     title: "2019 Volkswagen Golf",
-    image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=800&auto=format&fit=crop&h=400",
     price: 18995,
     mileage: 32000,
     fuelType: "Petrol",
@@ -49,13 +44,12 @@ const cars = [
   {
     id: 5,
     title: "2021 Tesla Model 3",
-    image: "https://images.unsplash.com/photo-1536700503339-1e4b06520771?q=80&w=800&auto=format&fit=crop&h=400",
     price: 34995,
     mileage: 18000,
     fuelType: "Electric",
     year: 2021,
     monthlyPayment: 499,
-  },
+  }
 ];
 
 export const CarCarousel = () => {
@@ -126,12 +120,8 @@ export const CarCarousel = () => {
           {getVisibleCars().map((car) => (
             <Card key={car.id} className="w-full transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
               <CardHeader className="p-0">
-                <div className="relative h-48 rounded-t-lg overflow-hidden">
-                  <img 
-                    src={car.image} 
-                    alt={car.title} 
-                    className="w-full h-full object-cover"
-                  />
+                <div className="relative h-48 rounded-t-lg overflow-hidden bg-gray-200 flex items-center justify-center">
+                  <Car className="w-24 h-24 text-gray-400" />
                   <div className="absolute top-0 right-0 bg-qmf-purple text-white px-4 py-2 rounded-bl-lg font-semibold">
                     £{car.monthlyPayment}/mo
                   </div>
@@ -158,7 +148,7 @@ export const CarCarousel = () => {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" className="w-full">
+                <Button onClick={scrollToForm} variant="outline" className="w-full">
                   <CreditCard className="mr-2 h-4 w-4" /> Apply for Finance
                 </Button>
               </CardFooter>
