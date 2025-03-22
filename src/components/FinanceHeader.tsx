@@ -41,8 +41,7 @@ export const FinanceHeader = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Home</Link>
-            <Link to="/finance" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Finance</Link>
-            <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">About Us</a>
+            <Link to="/about-us" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">About Us</Link>
             <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Vehicles</a>
             <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Contact</a>
           </nav>
