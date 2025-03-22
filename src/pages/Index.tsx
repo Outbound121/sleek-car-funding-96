@@ -53,7 +53,7 @@ const Index = () => {
       <FinanceHeader />
 
       <main className="flex-1">
-        {/* Finance Application Form Section - replaced with iframe container */}
+        {/* Finance Application Form Section - with iframe container */}
         <section className="container mx-auto py-6">
           <div className="bg-white rounded-xl shadow-lg overflow-hidden p-8">
             <div id="iframe-container" className="w-full min-h-[600px]"></div>
