@@ -29,20 +29,21 @@ export const FinanceHeader = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/finance" className="flex items-center py-0">
+            <Link to="/" className="flex items-center py-0">
               <img 
                 src="/lovable-uploads/fe31f1c8-6180-4be4-9dc5-1fac869f15ec.png" 
                 alt="Quick Motor Finance" 
                 className="h-24 md:h-24" 
               />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/finance" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Home</Link>
+            <Link to="/" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Home</Link>
             <Link to="/about-us" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">About Us</Link>
             <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Vehicles</a>
+            <Link to="/finance" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Finance</Link>
             <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Contact</a>
           </nav>
 
