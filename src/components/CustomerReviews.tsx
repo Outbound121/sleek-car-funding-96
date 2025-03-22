@@ -1,15 +1,33 @@
+
 import { useState, useEffect } from "react";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
-// Color palette for the avatar circles
-const colors = [
-  "bg-[#9b87f5]",
-  "bg-[#7E69AB]", 
-  "bg-[#0EA5E9]",
-  "bg-[#F97316]",
-  "bg-[#D946EF]",
-];
+// Function to get initials from a name
+const getInitials = (name: string) => {
+  return name
+    .split(' ')
+    .map(part => part.charAt(0))
+    .join('')
+    .toUpperCase();
+};
+
+// Function to generate a consistent color based on name
+const getColorFromName = (name: string) => {
+  const colors = [
+    "bg-qmf-purple",
+    "bg-qmf-yellow",
+    "bg-blue-500",
+    "bg-green-500",
+    "bg-pink-500",
+    "bg-orange-500",
+    "bg-indigo-500"
+  ];
+  
+  // Simple hash function to get a consistent index
+  const hash = name.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  return colors[hash % colors.length];
+};
 
 const reviews = [
   {
@@ -48,15 +66,6 @@ const reviews = [
     date: "3 June 2023",
   },
 ];
-
-// Helper function to get initials from name
-const getInitials = (name: string) => {
-  return name
-    .split(' ')
-    .map(part => part[0])
-    .join('')
-    .toUpperCase();
-};
 
 export const CustomerReviews = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -123,7 +132,7 @@ export const CustomerReviews = () => {
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentSlide * (100 / visibleReviews)}%)` }}
           >
-            {reviews.map((review, index) => (
+            {reviews.map((review) => (
               <div 
                 key={review.id} 
                 className={`w-full px-3 md:px-4`}
@@ -132,10 +141,10 @@ export const CustomerReviews = () => {
                 <Card className="h-full">
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
-                      <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-semibold ${colors[index % colors.length]}`}>
+                      <div className={`w-12 h-12 rounded-full overflow-hidden mr-4 flex items-center justify-center text-white font-semibold ${getColorFromName(review.name)}`}>
                         {getInitials(review.name)}
                       </div>
-                      <div className="ml-4">
+                      <div>
                         <h4 className="font-semibold">{review.name}</h4>
                         <div className="flex mt-1">
                           {renderStars(review.rating)}
