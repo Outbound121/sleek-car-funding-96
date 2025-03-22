@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
@@ -49,24 +48,15 @@ const Header = () => {
           <span className="text-qmf-dark font-medium cursor-default">
             About Us
           </span>
-          <a 
-            href="#" 
-            className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium"
-          >
+          <span className="text-qmf-dark font-medium cursor-default">
             Vehicles
-          </a>
-          <Link 
-            to="/finance"
-            className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium"
-          >
+          </span>
+          <span className="text-qmf-dark font-medium cursor-default">
             Finance Options
-          </Link>
-          <a 
-            href="#" 
-            className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium"
-          >
+          </span>
+          <span className="text-qmf-dark font-medium cursor-default">
             Contact
-          </a>
+          </span>
         </nav>
         
         <div className="hidden md:flex items-center">
@@ -105,27 +95,24 @@ const Header = () => {
             >
               About Us
             </span>
-            <a 
-              href="#"
-              className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium py-2"
+            <span 
+              className="text-qmf-dark font-medium py-2 cursor-default"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Vehicles
-            </a>
-            <Link 
-              to="/finance"
-              className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium py-2"
+            </span>
+            <span 
+              className="text-qmf-dark font-medium py-2 cursor-default"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Finance Options
-            </Link>
-            <a 
-              href="#"
-              className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium py-2"
+            </span>
+            <span 
+              className="text-qmf-dark font-medium py-2 cursor-default"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
-            </a>
+            </span>
           </nav>
           <div className="mt-6 flex flex-col space-y-4">
             <a 

@@ -42,9 +42,9 @@ export const FinanceHeader = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/finance" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Home</Link>
             <span className="text-qmf-dark-gray cursor-default">About Us</span>
-            <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Vehicles</a>
-            <Link to="/finance" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Finance</Link>
-            <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Contact</a>
+            <span className="text-qmf-dark-gray cursor-default">Vehicles</span>
+            <span className="text-qmf-dark-gray cursor-default">Finance</span>
+            <span className="text-qmf-dark-gray cursor-default">Contact</span>
           </nav>
 
           {/* Contact Info - Visible on all screen sizes */}
