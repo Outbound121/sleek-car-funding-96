@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -17,13 +18,13 @@ const cars = [
   },
   {
     id: 2,
-    title: "2021 Audi A4",
-    image: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?q=80&w=800&auto=format&fit=crop&h=400",
-    price: 25495,
-    mileage: 20000,
+    title: "2016 Audi A4",
+    image: "/lovable-uploads/b9878b29-d68d-4106-b7cb-c9abe30a2a93.png",
+    price: 10980,
+    mileage: 68303,
     fuelType: "Petrol",
-    year: 2021,
-    monthlyPayment: 389,
+    year: 2016,
+    monthlyPayment: 245,
   },
   {
     id: 3,
