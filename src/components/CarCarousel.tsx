@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,7 +9,7 @@ const cars = [
   {
     id: 1,
     title: "2020 Vauxhall Astra",
-    image: "/lovable-uploads/ca757c3e-5942-4a88-909e-c12cb5b71605.png",
+    image: "/lovable-uploads/d3fe37d4-49f1-404c-ad27-7fefd9226fb0.png",
     price: 10690,
     mileage: 72365,
     fuelType: "Diesel",
@@ -18,7 +19,7 @@ const cars = [
   {
     id: 2,
     title: "2016 Audi A4",
-    image: "/lovable-uploads/b9878b29-d68d-4106-b7cb-c9abe30a2a93.png",
+    image: "/lovable-uploads/bc727727-e6e7-41e6-b041-df1f2241be84.png",
     price: 10980,
     mileage: 68303,
     fuelType: "Petrol",
@@ -28,7 +29,7 @@ const cars = [
   {
     id: 3,
     title: "2021 Seat Mii",
-    image: "/lovable-uploads/f7505986-9bba-4797-9918-d5fa358df5d5.png",
+    image: "/lovable-uploads/4a05b7b8-27e9-46ef-9eaf-3703e4cebb85.png",
     price: 11130,
     mileage: 31340,
     fuelType: "Electric",
@@ -185,9 +186,12 @@ export const CarCarousel = () => {
         <ChevronRight className="h-6 w-6" />
       </Button>
 
-      <div className="text-center mt-12">
-        <Button className="bg-qmf-purple hover:bg-qmf-purple/90">
-          View All Vehicles
+      <div className="text-center mt-12 pb-8">
+        <Button 
+          className="bg-qmf-purple hover:bg-qmf-purple/90"
+          onClick={scrollToConverter}
+        >
+          Apply for Finance <CreditCard className="ml-2 h-5 w-5" />
         </Button>
       </div>
     </div>
