@@ -1,10 +1,13 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +17,10 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const navigateToFinance = () => {
+    navigate('/finance');
+  };
 
   return (
     <header 
@@ -25,22 +32,28 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <a href="/" className="flex items-center pb-3">
+          <Link to="/finance" className="flex items-center pb-3">
             <span className="text-qmf-primary font-bold text-2xl">Quick</span>
             <span className="text-qmf-dark font-medium text-2xl">Motor</span>
             <span className="ml-1 text-qmf-primary font-bold text-2xl">Finance</span>
-          </a>
+          </Link>
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
-          {['Home', 'About Us', 'Vehicles', 'Finance Options', 'Contact'].map((item) => (
-            <a 
-              key={item} 
-              href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+          {[
+            { name: 'Home', path: '/finance' },
+            { name: 'About Us', path: '/about-us' },
+            { name: 'Vehicles', path: '#' },
+            { name: 'Finance Options', path: '/finance' },
+            { name: 'Contact', path: '#' }
+          ].map((item) => (
+            <Link 
+              key={item.name} 
+              to={item.path}
               className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium"
             >
-              {item}
-            </a>
+              {item.name}
+            </Link>
           ))}
         </nav>
         
@@ -52,7 +65,7 @@ const Header = () => {
             <Phone className="w-4 h-4 mr-2" />
             0800 123 456
           </a>
-          <Button className="bg-qmf-primary hover:bg-qmf-primary/90 text-white">
+          <Button className="bg-qmf-primary hover:bg-qmf-primary/90 text-white" onClick={navigateToFinance}>
             Apply Now
           </Button>
         </div>
@@ -68,15 +81,21 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-5 animate-fade-in z-50">
           <nav className="flex flex-col space-y-4">
-            {['Home', 'About Us', 'Vehicles', 'Finance Options', 'Contact'].map((item) => (
-              <a 
-                key={item} 
-                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+            {[
+              { name: 'Home', path: '/finance' },
+              { name: 'About Us', path: '/about-us' },
+              { name: 'Vehicles', path: '#' },
+              { name: 'Finance Options', path: '/finance' },
+              { name: 'Contact', path: '#' }
+            ].map((item) => (
+              <Link 
+                key={item.name} 
+                to={item.path}
                 className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {item}
-              </a>
+                {item.name}
+              </Link>
             ))}
           </nav>
           <div className="mt-6 flex flex-col space-y-4">
@@ -87,7 +106,7 @@ const Header = () => {
               <Phone className="w-4 h-4 mr-2" />
               0800 123 456
             </a>
-            <Button className="w-full bg-qmf-primary hover:bg-qmf-primary/90 text-white">
+            <Button className="w-full bg-qmf-primary hover:bg-qmf-primary/90 text-white" onClick={navigateToFinance}>
               Apply Now
             </Button>
           </div>
