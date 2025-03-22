@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
@@ -45,18 +46,30 @@ const Header = () => {
           >
             Home
           </Link>
-          <span className="text-qmf-dark font-medium cursor-default">
+          <a 
+            href="#" 
+            className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium"
+          >
             About Us
-          </span>
-          <span className="text-qmf-dark font-medium cursor-default">
+          </a>
+          <a 
+            href="#" 
+            className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium"
+          >
             Vehicles
-          </span>
-          <span className="text-qmf-dark font-medium cursor-default">
+          </a>
+          <a 
+            href="#" 
+            className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium"
+          >
             Finance Options
-          </span>
-          <span className="text-qmf-dark font-medium cursor-default">
+          </a>
+          <a 
+            href="#" 
+            className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium"
+          >
             Contact
-          </span>
+          </a>
         </nav>
         
         <div className="hidden md:flex items-center">
@@ -90,29 +103,34 @@ const Header = () => {
             >
               Home
             </Link>
-            <span 
-              className="text-qmf-dark font-medium py-2 cursor-default"
+            <a 
+              href="#"
+              className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               About Us
-            </span>
-            <span 
-              className="text-qmf-dark font-medium py-2 cursor-default"
+            </a>
+            <a 
+              href="#"
+              className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Vehicles
-            </span>
-            <span 
-              className="text-qmf-dark font-medium py-2 cursor-default"
+            </a>
+            <a 
+              href="#"
+              className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Finance Options
-            </span>
-            <span 
-              className="text-qmf-dark font-medium py-2 cursor-default"
+            </a>
+            <a 
+              href="#"
+              className="text-qmf-dark hover:text-qmf-primary transition-colors duration-200 font-medium py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
-            </span>
+            </a>
           </nav>
           <div className="mt-6 flex flex-col space-y-4">
             <a 

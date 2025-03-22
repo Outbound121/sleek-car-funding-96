@@ -41,10 +41,10 @@ export const FinanceHeader = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/finance" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Home</Link>
-            <span className="text-qmf-dark-gray cursor-default">About Us</span>
-            <span className="text-qmf-dark-gray cursor-default">Vehicles</span>
-            <span className="text-qmf-dark-gray cursor-default">Finance</span>
-            <span className="text-qmf-dark-gray cursor-default">Contact</span>
+            <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">About Us</a>
+            <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Vehicles</a>
+            <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Finance</a>
+            <a href="#" className="text-qmf-dark-gray hover:text-qmf-purple transition-colors">Contact</a>
           </nav>
 
           {/* Contact Info - Visible on all screen sizes */}
