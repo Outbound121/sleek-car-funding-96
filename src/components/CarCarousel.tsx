@@ -1,13 +1,15 @@
+
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, Car, Fuel, Calendar, CreditCard } from "lucide-react";
 
-// Car data
+// Sample car data
 const cars = [
   {
     id: 1,
     title: "2020 BMW 3 Series",
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=800&auto=format&fit=crop&h=400",
     price: 22995,
     mileage: 25000,
     fuelType: "Diesel",
@@ -17,6 +19,7 @@ const cars = [
   {
     id: 2,
     title: "2021 Audi A4",
+    image: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?q=80&w=800&auto=format&fit=crop&h=400",
     price: 25495,
     mileage: 20000,
     fuelType: "Petrol",
@@ -26,6 +29,7 @@ const cars = [
   {
     id: 3,
     title: "2022 Mercedes C-Class",
+    image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800&auto=format&fit=crop&h=400",
     price: 28995,
     mileage: 15000,
     fuelType: "Hybrid",
@@ -35,6 +39,7 @@ const cars = [
   {
     id: 4,
     title: "2019 Volkswagen Golf",
+    image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=800&auto=format&fit=crop&h=400",
     price: 18995,
     mileage: 32000,
     fuelType: "Petrol",
@@ -44,12 +49,13 @@ const cars = [
   {
     id: 5,
     title: "2021 Tesla Model 3",
+    image: "https://images.unsplash.com/photo-1536700503339-1e4b06520771?q=80&w=800&auto=format&fit=crop&h=400",
     price: 34995,
     mileage: 18000,
     fuelType: "Electric",
     year: 2021,
     monthlyPayment: 499,
-  }
+  },
 ];
 
 export const CarCarousel = () => {
@@ -58,6 +64,7 @@ export const CarCarousel = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [autoplayEnabled, setAutoplayEnabled] = useState(true);
   
+  // Determine visible items based on screen width
   useEffect(() => {
     const updateVisibleItems = () => {
       if (window.innerWidth < 640) {
@@ -74,6 +81,7 @@ export const CarCarousel = () => {
     return () => window.removeEventListener("resize", updateVisibleItems);
   }, []);
 
+  // Auto-scroll functionality
   useEffect(() => {
     if (!autoplayEnabled) return;
     
@@ -92,6 +100,7 @@ export const CarCarousel = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + cars.length) % cars.length);
   };
 
+  // Create a circular array for infinite scrolling
   const getVisibleCars = () => {
     const result = [];
     for (let i = 0; i < visibleItems; i++) {
@@ -101,10 +110,10 @@ export const CarCarousel = () => {
     return result;
   };
 
-  const scrollToForm = () => {
-    const iframeContainer = document.getElementById('iframe-container');
-    if (iframeContainer) {
-      iframeContainer.scrollIntoView({ behavior: 'smooth' });
+  const scrollToConverter = () => {
+    const converterElement = document.getElementById('iframe-container');
+    if (converterElement) {
+      converterElement.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -120,8 +129,12 @@ export const CarCarousel = () => {
           {getVisibleCars().map((car) => (
             <Card key={car.id} className="w-full transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
               <CardHeader className="p-0">
-                <div className="relative h-48 rounded-t-lg overflow-hidden bg-gray-200 flex items-center justify-center">
-                  <Car className="w-24 h-24 text-gray-400" />
+                <div className="relative h-48 rounded-t-lg overflow-hidden">
+                  <img 
+                    src={car.image} 
+                    alt={car.title} 
+                    className="w-full h-full object-cover"
+                  />
                   <div className="absolute top-0 right-0 bg-qmf-purple text-white px-4 py-2 rounded-bl-lg font-semibold">
                     £{car.monthlyPayment}/mo
                   </div>
@@ -148,7 +161,11 @@ export const CarCarousel = () => {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button onClick={scrollToForm} variant="outline" className="w-full">
+                <Button 
+                  variant="outline" 
+                  className="w-full"
+                  onClick={scrollToConverter}
+                >
                   <CreditCard className="mr-2 h-4 w-4" /> Apply for Finance
                 </Button>
               </CardFooter>
@@ -157,6 +174,7 @@ export const CarCarousel = () => {
         </div>
       </div>
 
+      {/* Navigation buttons */}
       <Button 
         variant="outline" 
         className="absolute top-1/2 -left-4 transform -translate-y-1/2 rounded-full w-10 h-10 p-0 bg-white shadow-md hover:bg-gray-100"
@@ -172,12 +190,10 @@ export const CarCarousel = () => {
         <ChevronRight className="h-6 w-6" />
       </Button>
 
-      <div className="text-center mt-12 pb-8">
-        <Button 
-          className="bg-qmf-purple hover:bg-qmf-purple/90"
-          onClick={scrollToForm}
-        >
-          <CreditCard className="mr-2 h-4 w-4" /> Apply for Finance
+      {/* View All Cars Button */}
+      <div className="text-center mt-12">
+        <Button className="bg-qmf-purple hover:bg-qmf-purple/90">
+          View All Vehicles
         </Button>
       </div>
     </div>
