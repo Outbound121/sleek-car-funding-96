@@ -4,6 +4,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { FinanceHeader } from "@/components/FinanceHeader";
 import { Footer } from "@/components/Footer";
 import { CarCarousel } from "@/components/CarCarousel";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
 
 const Finance = () => {
   const { toast } = useToast();
@@ -75,6 +76,11 @@ const Finance = () => {
               <CarCarousel />
             </div>
           </div>
+        </section>
+        
+        {/* Why Choose Us Section */}
+        <section className="py-16">
+          <WhyChooseUs />
         </section>
       </main>
 
