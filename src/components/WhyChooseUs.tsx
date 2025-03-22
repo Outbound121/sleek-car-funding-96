@@ -51,15 +51,12 @@ export const WhyChooseUs = () => {
               Apply now and get a decision in minutes. Our simple process makes car finance easy.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div>
             <button 
-              className="px-6 py-3 bg-white text-qmf-purple font-semibold rounded-md hover:bg-gray-100 transition-colors"
+              className="px-6 py-3 bg-white text-qmf-purple font-semibold rounded-md hover:bg-gray-100 transition-colors w-full"
               onClick={scrollToForm}
             >
               Apply Now
-            </button>
-            <button className="px-6 py-3 bg-transparent border border-white text-white font-semibold rounded-md hover:bg-white/10 transition-colors">
-              Contact Us
             </button>
           </div>
         </div>
